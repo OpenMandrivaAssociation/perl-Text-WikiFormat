@@ -1,11 +1,10 @@
 %define module   Text-WikiFormat
 %define name	perl-%{module}
-%define version 0.78
-%define release %mkrel 3
+%define version 0.79
 
 Name: 		%{name}
 Version: 	%{version}
-Release:        %mkrel 2
+Release:        %mkrel 1
 Summary:	Module for translating Wiki formatted text into other formats
 License:	GPL or Artistic
 Group:		Development/Perl
