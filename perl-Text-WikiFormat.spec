@@ -15,7 +15,6 @@ BuildRequires:	perl-devel
 %endif
 BuildRequires:  perl(URI)
 BuildArch:      noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Text::WikiFormat converts text in a simple Wiki markup language to whatever
