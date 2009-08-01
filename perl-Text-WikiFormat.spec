@@ -1,21 +1,22 @@
-%define module   Text-WikiFormat
-%define name	perl-%{module}
-%define version 0.79
+%define upstream_name    Text-WikiFormat
+%define upstream_version 0.79
 
-Name: 		%{name}
-Version: 	%{version}
-Release:        %mkrel 2
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Module for translating Wiki formatted text into other formats
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source0:        ftp://ftp.perl.org/pub/CPAN/modules/by-module/Text/%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{module}
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:    ftp://ftp.perl.org/pub/CPAN/modules/by-module/Text/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
 BuildRequires:  perl(URI)
-BuildArch:      noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildArch:  noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Text::WikiFormat converts text in a simple Wiki markup language to whatever
@@ -23,7 +24,7 @@ your little heart desires, provided you can describe it accurately in a
 semi-regular tag language.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -44,4 +45,3 @@ rm -rf %{buildroot}
 %doc Changes README
 %{perl_vendorlib}/Text
 %{_mandir}/man3/*
-
