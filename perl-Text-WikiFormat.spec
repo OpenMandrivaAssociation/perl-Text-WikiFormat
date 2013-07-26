@@ -1,15 +1,15 @@
 %define upstream_name    Text-WikiFormat
-%define upstream_version 0.79
+%define upstream_version 0.80
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%perl_convert_version 0.80
+Release:	1
 
 Summary:	Module for translating Wiki formatted text into other formats
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Text/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Text/Text-WikiFormat-0.80.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(URI)
@@ -85,4 +85,5 @@ make test
 
 * Sat Oct 01 2005 misc@mandriva.org 0.76-1mdk
 - First mandriva package
+
 
