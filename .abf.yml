@@ -1,4 +1,5 @@
 removed_sources:
   Text-WikiFormat-0.79.tar.bz2: 34827a2d7a1d2c2a01386d6ba4f48c3ab1fa2e10
-sources:
   Text-WikiFormat-0.80.tar.gz: c3e7fdd7c29570d23bd913f83bbf9472e5d73f57
+sources:
+  Text-WikiFormat-0.81.tar.gz: 41a5d961919c6104b85af04d833d5ede52edb489
