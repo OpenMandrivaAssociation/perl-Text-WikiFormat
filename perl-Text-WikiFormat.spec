@@ -1,15 +1,13 @@
 %define upstream_name    Text-WikiFormat
-%define upstream_version 0.81
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	0.81
+Release:	4
 
 Summary:	Module for translating Wiki formatted text into other formats
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Text/Text-WikiFormat-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Text/Text-WikiFormat-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -22,7 +20,7 @@ your little heart desires, provided you can describe it accurately in a
 semi-regular tag language.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -46,9 +44,7 @@ make test
 
 * Sat Aug 01 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.790.0-1mdv2010.0
 + Revision: 406193
-- rebuild using %%perl_convert_version
-
-* Thu Jul 10 2008 Michael Scherer <misc@mandriva.org> 0.79-2mdv2009.0
+- rebuild using %0.81 Thu Jul 10 2008 Michael Scherer <misc@mandriva.org> 0.79-2mdv2009.0
 + Revision: 233583
 - rebuild
 
